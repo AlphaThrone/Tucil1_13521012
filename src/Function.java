@@ -35,7 +35,7 @@ public class Function {
         return convert;
     }
 
-    public static String converterOutput (int autoInput) {
+    public static String converterOutput (Integer autoInput) {
         String convert="";
         if (autoInput==1){
             convert="A";
@@ -58,30 +58,22 @@ public class Function {
         } else if (autoInput==10){
             convert="10";
         } else if (autoInput==11){
-            convert="11";
+            convert="J";
         } else if (autoInput==12){
-            convert="12";
+            convert="Q";
         } else if (autoInput==13){
-            convert="13";
+            convert="K";
         }
         return convert;
     }
 
-    public static void printArray(int[] array){
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
-    }
     public static void printStringArray(String[] array){
-        System.out.printf(array[0]);
-        for (int i = 1; i < array.length; i++) {
-            System.out.printf(" "+array[i]);
-        }
-    }
-    
-    public static void printStringResult(String[] array){
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (int i = 0; i < 4; i++) {
+            if(i!=3){
+                System.out.printf(array[i]+" ");
+            } else {
+                System.out.println(array[i]);
+            }
         }
     }
 
@@ -91,10 +83,9 @@ public class Function {
         return list.get(rand.nextInt(list.size()));
     }
 
-
-    public static int[] randomCard(){
+    public static int randomCard(){
         //List
-        List<Integer> cardDeck = new ArrayList<>();
+        List<Integer> cardDeck = new ArrayList<>(13);
         cardDeck.add(1);
         cardDeck.add(2);
         cardDeck.add(3);
@@ -102,20 +93,18 @@ public class Function {
         cardDeck.add(5);
         cardDeck.add(6);
         cardDeck.add(7);
-        cardDeck.add(8);
+        cardDeck.add(9);
         cardDeck.add(9);
         cardDeck.add(10);
         cardDeck.add(11);
         cardDeck.add(12);
         cardDeck.add(13);
-        
         //Array
-        int[] selectedCard = new int[4];
+        int selectedCard;
 
         //Algorithm
-        for (int i = 0; i < selectedCard.length; i++) {
-            selectedCard[i]=getRandomElement(cardDeck);
-        }
+        selectedCard=getRandomElement(cardDeck);
+        
         return selectedCard;
     }
 
