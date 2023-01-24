@@ -68,14 +68,20 @@ public class Main {
             }
         }
         allResult.addAll(BruteForce.getAllResult(cardValue));
-        System.out.println("Diperoleh "+allResult.size()+" solusi:");
-        for (int i = 0; i < allResult.size(); i++) {
-            System.out.println(allResult.get(i));   
+        if(allResult.size()==0){
+            System.out.println("TIdak ada solusi");
+        }else{
+            System.out.println("Diperoleh "+allResult.size()+" solusi:");
+            for (int i = 0; i < allResult.size(); i++) {
+                System.out.println(allResult.get(i));   
+            }
         }
         endTime = System.currentTimeMillis();
         System.out.println("Time execution: "+(endTime-startTime)+" ms");
-        if(File_Writer.isWriteResult()==true){
-            File_Writer.writeResult(userCard, allResult);
+        if(allResult.size()!=0){
+            if(File_Writer.isWriteResult()==true){
+                File_Writer.writeResult(userCard, allResult);
+            }
         }
     }
 }

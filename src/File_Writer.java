@@ -40,7 +40,7 @@ public class File_Writer extends Input {
             for (int i = 1; i < input.length; i++) {
                 writer.append(" "+input[i]);
             }
-            writer.append("\n");
+            writer.append("\nDiperoleh "+result.size()+" solusi:\n");
             for (int j = 0; j < result.size(); j++) {
                 if(j!=result.size()-1){
                     writer.append(result.get(j)+"\n");
