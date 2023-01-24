@@ -7,6 +7,11 @@ public class Input extends Menu{
         int pilihan = scan.nextInt();
         return pilihan;
     }
+    
+    public static String choiceString(){
+        String pilihan = scan.next();
+        return pilihan;
+    }
 
     public static String manualInput(){
         String inputManual;

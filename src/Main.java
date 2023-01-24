@@ -4,11 +4,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         //variables
-        boolean condition=false;
+        long startTime = System.currentTimeMillis();
+        long endTime;
         int opsiProgram;
         List<Integer>cardValue = new ArrayList<>(4);
-        List<String>allResult = new ArrayList<>();
         String[] userCard = new String[4];
+        List<String>allResult = new ArrayList<>();
+        boolean condition=false;
 
         //Deck of Cards
         List<String> deckCard = new ArrayList<>();
@@ -69,6 +71,11 @@ public class Main {
         System.out.println("Diperoleh "+allResult.size()+" solusi:");
         for (int i = 0; i < allResult.size(); i++) {
             System.out.println(allResult.get(i));   
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Time execution: "+(endTime-startTime)+" ms");
+        if(File_Writer.isWriteResult()==true){
+            File_Writer.writeResult(userCard, allResult);
         }
     }
 }
