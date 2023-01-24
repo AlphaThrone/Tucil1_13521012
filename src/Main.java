@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         //variables
-        long startTime = System.currentTimeMillis();
+        long startTime;
         long endTime;
         int opsiProgram;
         List<Integer>cardValue = new ArrayList<>(4);
@@ -67,6 +67,7 @@ public class Main {
                 opsiProgram=Input.choice();
             }
         }
+        startTime = System.currentTimeMillis();
         allResult.addAll(BruteForce.getAllResult(cardValue));
         if(allResult.size()==0){
             System.out.println("TIdak ada solusi");
