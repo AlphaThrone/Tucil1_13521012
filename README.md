@@ -15,7 +15,7 @@ Directory within the program:
 ### Execution
 1. Clone this repository
     ```sh
-    git clone https://github.com/WildanGhaly/Algeo01-21012
+    git clone https://github.com/AlphaThrone/Tucil1_13521012.git
     ```
 2. You can use this command line to run
     ```sh
