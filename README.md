@@ -10,8 +10,8 @@ Directory within the program:
 
 ## How To Run
 ### Installation requirement
--[Java]
--[JDK (Java Development Kit)]
+- [Java]
+- [JDK (Java Development Kit)]
 ### Execution
 1. Clone this repository
     ```sh
@@ -24,6 +24,9 @@ Directory within the program:
     cd ../bin
     java Main
     ```
+## Creator
+Program ini dibuat oleh:
+- Haikal Ardzi Shofiyyurrohman (13521012)
 
     [Java]: <https://www.java.com/en/download/>
     [JDK (Java Development Kit)]: <https://www.oracle.com/java/technologies/downloads/#java11>
